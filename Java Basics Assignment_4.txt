@@ -1,0 +1,138 @@
+1.Imp difference between compiler and interpreter
+
+Interpreter:
+a)Interpreter translates just one statement of the program at a time into machine code.
+b)An interpreter takes very less time to analyze the source code. However, the overall time to execute the process is much slower.
+c)An interpreter does not generate an intermediary code. Hence, an interpreter is highly efficient in terms of its memory.
+d)Keeps translating the program continuously till the first error is confronted. If any error is spotted, it stops working and hence debugging becomes easy.
+e)Interpreters are used by programming languages like Ruby and Python for example.
+
+Compiler:
+a)Compiler scans the entire program and translates the whole of it into machine code at once.
+b)A compiler takes a lot of time to analyze the source code. However, the overall time taken to execute the process is much faster.
+c)A compiler always generates an intermediary object code. It will need further linking. Hence more memory is needed.
+d)A compiler generates the error message only after it scans the complete program and hence debugging is relatively harder while working with a compiler.
+e)Compliers are used by programming languages like C and C++ for example.
+
+2.Few details of strongly typed language and loosely typed language with examples
+
+Strongly-typed language:
+A strongly-typed language is one in which variables are bound to specific data types, and will result in type errors if types do not match up as expected in the expression regardless of when type checking occurs.
+Java is a strongly typed programming language because every variable must be declared with a data type. A variable cannot start off life without knowing the range of values it can hold, and once it is declared, the data type of the variable cannot change.
+Examples:
+boolean hasDataType;
+int cost = 10;
+
+loosely-typed language:
+In programming we call a language loosely typed when you don’t have to explicitly specify types of variables and objects.
+A loosely typed language is a programming language that does not require a variable to be defined.
+
+3.About stack overflow
+
+StackOverflowError is an error which Java doesn’t allow to catch, for instance, stack running out of space, as it’s one of the most common runtime errors one can encounter.
+The main cause of the StackOverflowError is that we haven’t provided the proper terminating condition to our recursive function or template, which means it will turn into an infinite loop.
+Example: Lack of proper or no termination condition. This is mostly the cause of this situation termed as unterminated or infinite recursion.
+
+4.Work on data types
+
+Primitive Data Types: such as boolean, char, int, short, byte, long, float, and double
+Non-Primitive Data Type or Object Data type: such as String, Array,objects etc.
+
+5.Write the simplest code for the if while switch 
+
+public class DemoIfWhileSwitch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x=14;
+		int start=1;
+		if(x%2==0) {
+			System.out.println("even");
+		}else {
+			System.out.println("odd");
+		}
+		switch(x % 2) {
+		case 0:
+			System.out.println("even");
+			break;
+			default:
+				System.out.println("odd");
+		}
+		while(start<=x) {
+			if((start%2)==0){
+				System.out.println(start+"");
+			}
+			start++;
+		}
+		
+	}
+
+}
+
+6.In a class create constructor and object use data members and function members
+
+public class ConstructorDataMembs {
+	
+	int empId;  
+	   String empName;  
+		    
+	   //parameterized constructor with two parameters
+	   ConstructorDataMembs(int id, String name){  
+	       this.empId = id;  
+	       this.empName = name;  
+	   }  
+	   void info(){
+	        System.out.println("Id: "+empId+" Name: "+empName);
+	   }  
+		   
+	   public static void main(String args[]){  
+		   ConstructorDataMembs obj1 = new ConstructorDataMembs(6245,"Sri");  
+		   ConstructorDataMembs obj2 = new ConstructorDataMembs(6532,"Janu");  
+		obj1.info();  
+		obj2.info();  
+	   }  
+	}
+
+7.Create a class create 2 constuctors in a single class use both param and non param
+
+public class TwoConstructor {
+	 public String empName;
+	    public int empSalary;
+	    public String address;
+
+	    
+	    public TwoConstructor()
+	    {
+	    	
+	        this("Sri");
+	    }
+
+	    public TwoConstructor(String name)
+	    {
+	    	
+	    	this(name, 52535);
+	    }
+	    public TwoConstructor(String name, int sal)
+	    {
+	    	
+	    	this(name, sal, "Karimnagar");
+	    }
+	    public TwoConstructor(String name, int sal, String addr)
+	    {
+	    	this.empName=name;
+	    	this.empSalary=sal;
+	    	this.address=addr;
+	    }
+
+	    void disp() {
+	    	System.out.println("Employee Name: "+empName);
+	    	System.out.println("Employee Salary: "+empSalary);
+	    	System.out.println("Employee Address: "+address);
+	    }
+	    public static void main(String[] args)
+	    {
+	    	TwoConstructor obj = new TwoConstructor();
+	        obj.disp();
+	    }
+
+}
