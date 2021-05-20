@@ -1,0 +1,81 @@
+1. java code to Implement array List elements
+
+import java.util.ArrayList;
+
+public class ArrayListImplementation {
+	
+	public static void main(String[] args) {
+	    ArrayList<String> languages = new ArrayList<>();
+
+	    // add elements in the array list
+	    languages.add("Srisharanya");
+	    languages.add("Srii");
+	    languages.add("Janu");
+	    System.out.println("ArrayList: " + languages);
+	    
+	    // change the element of the array list
+	    languages.set(2, "JavaScript");
+	    System.out.println("Modified ArrayList: " + languages);
+	    
+	    String str = languages.get(1);
+	    System.out.print("Element at index 1: " + str);
+	    String str1 = languages.remove(1);
+	    System.out.println("\n Updated ArrayList: " + languages);
+	    System.out.println("Removed Element: " + str);
+	  }
+}
+
+
+2.Perform LinkedList Collection
+
+import java.util.LinkedList;
+
+public class LinkedListDemo {
+
+	public static void main(String[] args) {
+		LinkedList<String> languages = new LinkedList<>();
+
+	    // add elements in LinkedList
+	    languages.add("Java");
+	    languages.add("Python");
+	    languages.add("JavaScript");
+	    languages.add("Kotlin");
+	    System.out.println("LinkedList: " + languages);
+
+	    // remove elements from index 1
+	    String str = languages.remove(1);
+	    System.out.println("Removed Element: " + str);
+
+	    System.out.println("Updated LinkedList: " + languages);
+
+		
+
+	}
+
+}
+
+3. Java code to Perform Priority Queue 
+
+
+import java.util.PriorityQueue;
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class Main {
+	public static void main(String[] args) {
+
+        // Creating a priority queue
+        PriorityQueue<Integer> numbers = new PriorityQueue<>();
+        numbers.add(4);
+        numbers.add(2);
+        numbers.add(1);
+        System.out.println("PriorityQueue: " + numbers);
+
+        
+        boolean result = numbers.remove(2);
+        System.out.println("Is the element 2 removed? " + result);
+
+        
+        int number = numbers.poll();
+        System.out.println("Removed Element Using poll(): " + number);
+    }
+}
